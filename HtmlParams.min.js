@@ -1,6 +1,7 @@
 /**
  * HtmlParams v1.0
- *
+ * https://github.com/docee/HtmlParams
+ * 
  * Copyright 2013 Docee
  * Released under the MIT license
  */
