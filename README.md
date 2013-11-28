@@ -27,7 +27,7 @@ var htmlParams=new HtmlParams();
 
 **返回值:字符串**
 
-    由于URL参数名是可以重复的，如:sample.html?a=1&b=2&a=1就出现了两个a参数值，一般情况下都是将他们转化为数组的，HtmlParams也是如此，将其转化为数组，使用该方法并不返回全部参数值，默认返回第一个参数值，也就是1;
+    由于URL参数名是可以重复的，如:sample.html?a=1&b=2&a=3就出现了两个a参数值，一般情况下都是将他们转化为数组的，HtmlParams也是如此，将其转化为数组，使用该方法并不返回全部参数值，默认返回第一个参数值，也就是1;
 
 
 ----------
@@ -55,7 +55,7 @@ var htmlParams=new HtmlParams();
 
 **返回值:String**
 
-    获取该参数名第Number个参数值(这是ParamsObject对象的方法);
+    获取该参数名第Number(从0开始)个参数值(这是ParamsObject对象的方法);
     
 ----------
 
