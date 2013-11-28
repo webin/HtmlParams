@@ -25,6 +25,7 @@ var htmlParams=new HtmlParams();
 ----------
 **htmlParams.getNormalParams('参数名');**//获取该参数名默认第一个参数值
 
+**返回值:字符串**
 
     由于URL参数名是可以重复的，如:**sample.html?a=1&b=2&a=1**就出现了两个a参数值，一般情况下都是将他们转化为数组的，HtmlParams也是如此，将其转化为数组，使用该方法并不返回全部参数值，默认返回第一个参数值，也就是1;
 
@@ -32,6 +33,30 @@ var htmlParams=new HtmlParams();
 ----------
 **htmlParams.getParamsObj('参数名');**//获取该参数名的参数对象
 
-    在HtmlParams中，默认用ParamsObject对象存储URL参数数据，在建立HtmlParams对象的时候，程序就会自动初始化URL参数数据，按照参数名key生成ParamsObject对象，并存入HtmlParams对象的params数组中。
+**返回值:ParamsObject对象**
 
+    在HtmlParams中，默认用ParamsObject对象存储URL参数数据，在建立HtmlParams对象的时候，程序就会自动初始化URL参数数据，按照参数名key生成ParamsObject对象，并存入HtmlParams对象的params数组中。
+    ParamsObject对象的结构如下:
+        ParamsObject
+            ---valueSize:Number//参数值个数
+            ---value:Array//参数值数组
+            ---toValueArray:function//返回参数组数组
+            ---getValue(number):function//获取第number个参数值
+            
 ----------
+**htmlParams.getParamsObj('参数名').toValueArray();**//获取该参数名的参数值数组
+
+**返回值:String数组**
+
+    获取该参数名的参数值数组(这是ParamsObject对象的方法);
+    
+----------
+**htmlParams.getParamsObj('参数名').getValue(Number);**//获取该参数名第Number个参数值
+
+**返回值:String**
+
+    获取该参数名第Number个参数值(这是ParamsObject对象的方法);
+    
+----------
+
+**PS:如果HtmlParams找不到你所要找的参数值，将返回undefined**
