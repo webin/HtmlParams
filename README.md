@@ -40,7 +40,7 @@ var htmlParams=new HtmlParams();
         ParamsObject
             ---valueSize:Number//参数值个数
             ---value:Array//参数值数组
-            ---toValueArray:function//返回参数组数组
+            ---toValueArray:function//返回参数值数组
             ---getValue(number):function//获取第number个参数值
             
 ----------
