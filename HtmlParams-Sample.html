@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>HtmlParams范例</title>
+	</head>
+		<body>
+			<h3>HtmlParams范例</h3>
+			<p>请从Console中看运行结果,传递参数需手工敲到URL中,参数如下:</p>
+			<p>?a=1&a=2&b=%u6D4B%u8BD5</p>
+		</body>
+		<script src="HtmlParams.min.js"></script>
+		<script>
+			var htmlParams=new HtmlParams();
+			console.log(htmlParams.getParamsObj('a').getValue(0));
+			console.log(htmlParams.getNormalParams('b'));
+			console.log(htmlParams.getNormalParams('c'));
+			console.log(htmlParams.getNormalParams('d'));
+		</script>
+</html>
