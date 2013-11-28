@@ -1,6 +1,5 @@
 HtmlParams v1.0
 =====================
----------
 关于HtmlParams
 ---------
 HtmlParams是一个用于获取Html静态页URL参数的JS工具包,使用它可以快速高效获取Html URL参数。
@@ -8,4 +7,4 @@ HtmlParams是一个用于获取Html静态页URL参数的JS工具包,使用它可
 
 
 如何使用HtmlParams
-=====================
+---------
