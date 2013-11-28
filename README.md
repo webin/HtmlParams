@@ -46,14 +46,14 @@ var htmlParams=new HtmlParams();
 ----------
 **htmlParams.getParamsObj('参数名').toValueArray();**//获取该参数名的参数值数组
 
-**返回值:String数组**
+**返回值:字符串数组**
 
     获取该参数名的参数值数组(这是ParamsObject对象的方法);
     
 ----------
 **htmlParams.getParamsObj('参数名').getValue(Number);**//获取该参数名第Number个参数值
 
-**返回值:String**
+**返回值:字符串**
 
     获取该参数名第Number(从0开始)个参数值(这是ParamsObject对象的方法);
     
