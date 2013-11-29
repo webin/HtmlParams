@@ -80,6 +80,7 @@ ParamsObject.prototype.getValue = function (number) {
     var _number_ = Number(number
     
     if (!isNaN(_number_)) {
+     
         if (this.value[_number_]) {
             return this.value[_number_];
         }
