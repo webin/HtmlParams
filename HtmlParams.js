@@ -24,10 +24,12 @@ HtmlParams.prototype.init = function () {
     var paramStr = searchStr.substring(searchStr.indexOf("?") + 1, searchStr.length).split("&");
     var _params_ = this.params;
     var _htmlparams_ = this;
+    
     paramStr.forEach(function (paramEach) {
         var paramsKey = paramEach.toString().split('=')[0];
         //noinspection JSDeprecatedSymbols
         var paramsValue = unescape(paramEach.toString().split('=')[1]);
+        
         if (!_htmlparams_.isExistedParams(paramsKey)) {
             var paramsObj = new ParamsObject();
             paramsObj.value.push(String(paramsValue));
@@ -59,6 +61,7 @@ HtmlParams.prototype.getNormalParams = function (paramsKey) {
 /*获取参数对象*/
 HtmlParams.prototype.getParamsObj = function (paramsKey) {
     var _params_ = this.params;
+    
     if (this.isExistedParams(paramsKey)) {
         return _params_[paramsKey];
     }
@@ -74,7 +77,8 @@ ParamsObject.prototype.toValueArray = function () {
 
 /*获取参数值*/
 ParamsObject.prototype.getValue = function (number) {
-    var _number_ = Number(number);
+    var _number_ = Number(number
+    
     if (!isNaN(_number_)) {
         if (this.value[_number_]) {
             return this.value[_number_];
