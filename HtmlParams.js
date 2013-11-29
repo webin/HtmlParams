@@ -50,12 +50,15 @@ HtmlParams.prototype.isExistedParams = function (paramsKey) {
 
 /*获取参数值,只获取第一个参数值*/
 HtmlParams.prototype.getNormalParams = function (paramsKey) {
+ 
     if (this.isExistedParams(paramsKey)) {
+     
         return this.getParamsObj(paramsKey).getValue(0);
     }
     else {
         return undefined;
     }
+    
 };
 
 /*获取参数对象*/
@@ -68,6 +71,7 @@ HtmlParams.prototype.getParamsObj = function (paramsKey) {
     else {
         return undefined;
     }
+    
 };
 
 /*获取参数值数组*/
@@ -77,7 +81,7 @@ ParamsObject.prototype.toValueArray = function () {
 
 /*获取参数值*/
 ParamsObject.prototype.getValue = function (number) {
-    var _number_ = Number(number
+    var _number_ = Number(number);
     
     if (!isNaN(_number_)) {
      
@@ -87,6 +91,7 @@ ParamsObject.prototype.getValue = function (number) {
         else {
             return undefined;
         }
+        
     }
     else {
         console.error("参数值位置必须是数字类型!");
