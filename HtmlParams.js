@@ -5,16 +5,19 @@
  * Copyright 2013 Docee
  * Released under the MIT license
  */
+ 
 //参数对象
 function ParamsObject() {
     this.valueSize = 0;//参数值个数
     this.value = [];//参数值数组
 }
-//HtmlParams
+
+
 function HtmlParams() {
     this.params = [];//参数对象数组
     this.init();//初始化
 }
+
 /*初始化页面参数*/
 HtmlParams.prototype.init = function () {
     var searchStr = location.search;
@@ -36,11 +39,13 @@ HtmlParams.prototype.init = function () {
         }
     });
 };
+
 /*判断是否有存在参数，如果有则true，否则返回false*/
 HtmlParams.prototype.isExistedParams = function (paramsKey) {
     var _params_ = this.params;
     return _params_[paramsKey];
 };
+
 /*获取参数值,只获取第一个参数值*/
 HtmlParams.prototype.getNormalParams = function (paramsKey) {
     if (this.isExistedParams(paramsKey)) {
@@ -50,6 +55,7 @@ HtmlParams.prototype.getNormalParams = function (paramsKey) {
         return undefined;
     }
 };
+
 /*获取参数对象*/
 HtmlParams.prototype.getParamsObj = function (paramsKey) {
     var _params_ = this.params;
@@ -60,10 +66,12 @@ HtmlParams.prototype.getParamsObj = function (paramsKey) {
         return undefined;
     }
 };
+
 /*获取参数值数组*/
 ParamsObject.prototype.toValueArray = function () {
     return this.value;
 };
+
 /*获取参数值*/
 ParamsObject.prototype.getValue = function (number) {
     var _number_ = Number(number);
